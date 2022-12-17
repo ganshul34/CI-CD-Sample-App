@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:ganshul34/CI-CD-Sample-App.git",
   "author": "Anshul Gupta <ganshul34@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }
