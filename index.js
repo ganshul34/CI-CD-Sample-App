@@ -1,15 +1,15 @@
 const http = require('http');
 
 require('dotenv').config();
+const express = require('express')
+const app = express();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Sample Response');
-});
+app.get('/', (req, res) => {
+  return res.status(200).json({ msg: 'Initial Server setup'});
+})
 
-server.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port} on 0.0.0.0 127`)
+})
