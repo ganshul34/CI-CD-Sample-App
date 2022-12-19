@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
   return res.status(200).json({ msg: 'Initial Server setup'});
 })
 
+app.post('/', (req, res) => {
+  return res.status(200).json({ msg: 'Post request success'});
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port} on 0.0.0.0 127`)
 })
